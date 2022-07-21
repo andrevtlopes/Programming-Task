@@ -62,7 +62,7 @@ class SuperHero:
 
         Parameters
         ----------
-        hero: dict
+        hero : dict
             Dictionary with raw information provided by the superhero-api
 
         Returns
