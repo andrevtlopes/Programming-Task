@@ -166,6 +166,7 @@ class PDF:
                 self._right_info += inch/2
                 self._right_image += inch/2
                 self._draw_heading(key, 16)
+                self._page_items += 1
 
             heroes = self.data[key]
             for hero in heroes:
@@ -207,10 +208,11 @@ class PDF:
 
                 self._bottom -= inch/4
 
-                if self._page_items == 4:
+                if self._page_items == 5:
                     # Reset bottom and create new page on PDF
                     self.canvas.showPage()
                     self._page_items = 0
                     self._bottom = 11 * inch
 
         self.canvas.save()
+        print("Created Superheroes PDF '{}.pdf'".format(self.file_name))
