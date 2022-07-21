@@ -30,7 +30,7 @@ def main():
             if (not biography):
                 continue
 
-            if (biography['publisher'] == 'DC Comics'):
+            if (biography['publisher'].lower() == 'DC Comics'.lower()):
                 # get all information once publisher is right
                 hero = client.get_super_hero(hero_id)
 

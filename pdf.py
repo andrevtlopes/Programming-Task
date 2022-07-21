@@ -52,7 +52,7 @@ class PDF:
             the super heroes list
         """
         for super_hero in super_heroes:
-            group = super_hero.occupation[0]
+            group = super_hero.occupation[0].lower().capitalize()
             if group not in self.data:
                 self.data.update({group: [super_hero]})
             else:
